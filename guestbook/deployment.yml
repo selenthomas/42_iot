@@ -2,22 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: app
-  name: app
+    app: nginx
+  name: nginx
   namespace: dev
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: app
+      app: nginx
   template:
     metadata:
       labels:
-        app: app
+        app: nginx
     spec:
       containers:
       - image: paulbouwer/hello-kubernetes:1.8
-        name: hello-k8s
+        name: nginx
         env:
         - name: MESSAGE
-          value: Hello from app
+          value: Hello from app1
