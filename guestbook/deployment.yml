@@ -20,4 +20,4 @@ spec:
         name: nginx
         env:
         - name: MESSAGE
-          value: Hello from app1
+          value: bye from app1
