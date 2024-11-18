@@ -20,4 +20,4 @@ spec:
         name: nginx
         env:
         - name: MESSAGE
-          value: bye from app1
+          value: love from app1
