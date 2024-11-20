@@ -16,7 +16,7 @@ spec:
         app: nginx
     spec:
       containers:
-      - image: wil42/playground:v1
+      - image: wil42/playground:v2
         name: nginx
 ---
 apiVersion: v1
