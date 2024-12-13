@@ -2,29 +2,29 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: nginx
-  name: nginx
+    app: playground
+  name: playground
   namespace: dev
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: playground
   template:
     metadata:
       labels:
-        app: nginx
+        app: playground
     spec:
       containers:
       - image: wil42/playground:v2
-        name: nginx
+        name: playground
 ---
 apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: nginx
-  name: nginx
+    app: playground
+  name: playground
   namespace: dev
 spec:
   ports:
@@ -33,5 +33,5 @@ spec:
     protocol: TCP
     targetPort: 8888
   selector:
-    app: nginx
+    app: playground
   type: ClusterIP
